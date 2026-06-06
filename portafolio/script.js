@@ -43,4 +43,19 @@ document.addEventListener("DOMContentLoaded", () => {
             thumbnails[currentSlide].classList.add('active');
         };
     });
+
+    // Email Copy Logic
+    const copyEmailBtn = document.getElementById('copy-email');
+    if (copyEmailBtn) {
+        copyEmailBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const email = 'martinbellandi2000@gmail.com';
+            navigator.clipboard.writeText(email).then(() => {
+                alert(`¡Email copiado al portapapeles!\n${email}`);
+            }).catch(err => {
+                console.error('Error al copiar: ', err);
+                alert(`Mi email es: ${email}`);
+            });
+        });
+    }
 });
