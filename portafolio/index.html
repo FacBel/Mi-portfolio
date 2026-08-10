@@ -25,10 +25,14 @@
         </div>
 
         <nav class="navbar">
-            <a href="#inicio">Inicio</a>
-            <a href="#sobre-mi">Sobre mí</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#tecnologias">Tecnologías</a>
+            <a href="#inicio" data-i18n="nav-home">Inicio</a>
+            <a href="#sobre-mi" data-i18n="nav-about">Sobre mí</a>
+            <a href="#proyectos" data-i18n="nav-projects">Proyectos</a>
+            <a href="#tecnologias" data-i18n="nav-tech">Tecnologías</a>
+            <div class="lang-switch">
+                <button id="lang-en" class="lang-text-btn">EN</button>
+                <button id="lang-es" class="lang-text-btn active">ES</button>
+            </div>
         </nav>
 
     </header>
@@ -40,19 +44,19 @@
         <div class="hero-text">
 
             <h1>
-                Hola, soy <span>Facundo Bellandi</span>
+                <span data-i18n="hero-hi">Hola, soy</span> <span>Facundo Bellandi</span>
             </h1>
 
-            <h2>
+            <h2 data-i18n="hero-role">
                 Estudiante de Desarrollo de Software en el último año
             </h2>
 
-            <p>
+            <p data-i18n="hero-desc">
                 Desarrollo aplicaciones web, sistemas de gestión y soluciones digitales combinando frontend, backend y bases de datos. Tengo experiencia en tecnologías como Python, Django, Flask, React y SQL. Disfruto trabajar en equipo, aprender nuevas tecnologías y utilizar herramientas de IA para acelerar el desarrollo, para crear interfaces modernas y mejorar los resultados.
             </p>
 
             <div class="hero-links-container">
-                <a href="#proyectos" class="hero-btn">
+                <a href="#proyectos" class="hero-btn" data-i18n="hero-btn">
                     Ver proyectos
                 </a>
                 <div class="hero-social">
@@ -76,11 +80,11 @@
 
     <section class="sobre-mi" id="sobre-mi">
 
-        <h2 class="section-title">Sobre mí</h2>
+        <h2 class="section-title" data-i18n="about-title">Sobre mí</h2>
 
         <div class="sobre-mi-container">
             <div class="sobre-mi-intro">
-                <p>
+                <p data-i18n="about-desc">
                  Soy estudiante de Desarrollo de Software con interés en desarrollo web, bases de datos, automatización e inteligencia artificial.
                 <br>
                 He desarrollado proyectos utilizando Python (Django y Flask), JavaScript (React y Next.js) y bases de datos como MySQL, creando aplicaciones web, APIs REST y soluciones personalizadas.<br>
@@ -90,13 +94,13 @@
                 </p>
             </div>
 
-            <h3 class="sobre-mi-subtitle">Áreas de formación</h3>
+            <h3 class="sobre-mi-subtitle" data-i18n="about-subtitle">Áreas de formación</h3>
 
             <div class="formacion-grid">
 
                 <div class="formacion-card">
                     <div class="formacion-icon">💻</div>
-                    <h4>Desarrollo Web</h4>
+                    <h4 data-i18n="form-web">Desarrollo Web</h4>
                     <ul>
                         <li>HTML, CSS y JavaScript.</li>
                         <li>Python, React y Next.js.</li>
@@ -108,7 +112,7 @@
 
                 <div class="formacion-card">
                     <div class="formacion-icon">🗄️</div>
-                    <h4>Bases de Datos</h4>
+                    <h4 data-i18n="form-db">Bases de Datos</h4>
                     <ul>
                         <li>Modelado relacional.</li>
                         <li>SQL.</li>
@@ -119,7 +123,7 @@
 
                 <div class="formacion-card">
                     <div class="formacion-icon">🎨</div>
-                    <h4>UI / UX</h4>
+                    <h4 data-i18n="form-ui">UI / UX</h4>
                     <ul>
                         <li>Diseño de interfaces.</li>
                         <li>Experiencia de usuario.</li>
@@ -130,7 +134,7 @@
 
                 <div class="formacion-card">
                     <div class="formacion-icon">✅</div>
-                    <h4>Calidad de Software</h4>
+                    <h4 data-i18n="form-qa">Calidad de Software</h4>
                     <ul>
                         <li>Casos de prueba.</li>
                         <li>Validación y verificación.</li>
@@ -140,7 +144,7 @@
 
                 <div class="formacion-card">
                     <div class="formacion-icon">🌐</div>
-                    <h4>Redes y Sistemas</h4>
+                    <h4 data-i18n="form-net">Redes y Sistemas</h4>
                     <ul>
                         <li>Subnetting.</li>
                         <li>Sistemas operativos personalizados.</li>
@@ -152,7 +156,7 @@
 
                 <div class="formacion-card">
                     <div class="formacion-icon">🤖</div>
-                    <h4>IA y Automatización</h4>
+                    <h4 data-i18n="form-ia">IA y Automatización</h4>
                     <ul>
                         <li>Uso de asistentes de código.</li>
                         <li>Automatización de tareas.</li>
@@ -170,12 +174,11 @@
 
     <section class="projects-section" id="proyectos">
 
-    <h2 class="section-title">
+    <h2 class="section-title" data-i18n="proj-title">
         Proyectos
     </h2>
-    <h3 class="projects-subtitle" align="center"  > Estos son mis proyectos, algunos siguen en desarollo y otros estan finalizados, pero sigo trabajando en ellos y en más. </h3>
-    <br>
-    <br>
+    <h3 class="projects-subtitle" data-i18n="proj-subtitle">Algunos siguen en desarrollo y otros están finalizados, pero sigo trabajando en ellos y en más proyectos.</h3>
+
 
     <div class="slider-container">
 
@@ -186,22 +189,13 @@
 
             <div class="project-card">
 
-                <div class="project-slider">
-                    <div class="slider-wrapper">
-                        <img src="img/Flujo1.png" alt="Flujo n8n" class="slide active">
-                        <img src="img/formulario1.png" alt="formulario" class="slide">
-                        <img src="img/html3.png" alt="HTML vista 1" class="slide">
-                        <img src="img/html4.png" alt="HTML 2" class="slide">
-                        <img src="img/html2.png" alt="HTML vista 3" class="slide">
-                        <img src="img/Prompt.png" alt="Prompt" class="slide">
-                    </div>
-                </div>
+                <div class="card-status en-desarrollo" data-i18n="status-dev">En desarrollo</div>
 
                 <div class="project-content">
 
-                    <h3>Analizador de cv con IA</h3>
+                    <h3 data-i18n="proj1-title">Analizador de cv con IA</h3>
 
-                    <p>
+                    <p data-i18n="proj1-desc">
                        Sistema de análisis automático de currículums desarrollado con n8n y Google Gemini. Permite cargar un CV en PDF, extraer su contenido, generar una evaluación mediante IA y enviar un informe profesional en formato HTML por correo electrónico con fortalezas, oportunidades de mejora y recomendaciones personalizadas.
                     </p>
 
@@ -217,9 +211,14 @@
                         <span><i class="devicon-html5-plain colored"></i> HTML5</span>
                     </div>
 
-                    <a href="#" class="github-btn">
-                        <i class="devicon-github-original"></i> GitHub
-                    </a>
+                    <div class="project-actions">
+                        <button class="view-btn" data-images='["img/Flujo1.png", "img/formulario1.png", "img/html3.png", "img/html4.png", "img/html2.png", "img/Prompt.png"]'>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="btn-view">Ver</span>
+                        </button>
+                        <a href="#" class="github-btn">
+                            <i class="devicon-github-original"></i> GitHub
+                        </a>
+                    </div>
 
                 </div>
 
@@ -229,19 +228,13 @@
 
             <div class="project-card">
 
-                <div class="project-slider">
-                    <div class="slider-wrapper">
-                        <img src="img/RPmejorado1.png" alt="Rocket Pizza" class="slide active">
-                        <img src="img/RPmejorado2.png" alt="Rocket Pizza vista 2" class="slide">
-                        <img src="img/RPmejorado3.png" alt="Rocket Pizza vista 3" class="slide">
-                    </div>
-                </div>
+                <div class="card-status finalizado" data-i18n="status-done">Finalizado</div>
 
                 <div class="project-content">
 
-                    <h3>Rocket Pizza (Frontend)</h3>
+                    <h3 data-i18n="proj2-title">Rocket Pizza (Frontend)</h3>
 
-                    <p>
+                    <p data-i18n="proj2-desc">
                         Aplicación web simulando una pizzería online, enfocada en UI/UX y rendimiento. Implementación de Server-Side Rendering (SSR) y ruteo dinámico con Next.js, junto a un diseño full responsive con Tailwind. contiene un carrito de compras, página de contacto y un blog con artículos sobre pizzas traidas desde una API externa.
                     </p>
 
@@ -251,9 +244,14 @@
                         <span><i class="devicon-tailwindcss-plain"></i> Tailwind</span>
                     </div>
 
-                    <a href="https://github.com/AleQuiroga26/Rocket-Pizza.git" class="github-btn">
-                        <i class="devicon-github-original"></i> GitHub
-                    </a>
+                    <div class="project-actions">
+                        <button class="view-btn" data-images='["img/RPmejorado1.png", "img/RPmejorado2.png", "img/RPmejorado3.png"]'>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="btn-view">Ver</span>
+                        </button>
+                        <a href="https://github.com/AleQuiroga26/Rocket-Pizza.git" class="github-btn">
+                            <i class="devicon-github-original"></i> GitHub
+                        </a>
+                    </div>
 
                 </div>
 
@@ -263,21 +261,13 @@
 
             <div class="project-card">
 
-                <div class="project-slider">
-                    <div class="slider-wrapper">
-                        <img src="img/django_rocket1.png" alt="Django" class="slide active">
-                        <img src="img/django_rocket2.png" alt="Django vista 2" class="slide"> 
-                        <img src="img/django_rocket4.png" alt="Django vista 4" class="slide">
-                        <img src="img/django_rocket3.png" alt="Django vista 3" class="slide">
-                        <img src="img/Django administracion.png" alt="Django vista 5" class="slide">
-                    </div>
-                </div>
+                <div class="card-status finalizado" data-i18n="status-done">Finalizado</div>
 
                 <div class="project-content">
 
-                    <h3>Rocket Pizza (Backend)</h3>
+                    <h3 data-i18n="proj3-title">Rocket Pizza (Backend)</h3>
 
-                    <p>
+                    <p data-i18n="proj3-desc">
                         Sistema de gestión backend utilizando el patrón MVT (Model-View-Template). Incluye un panel administrativo completo, operaciones CRUD para productos y categorías, y autenticación de usuarios.
                     </p>
 
@@ -288,9 +278,14 @@
                         <span><i class="devicon-html5-plain"></i> HTML/CSS</span>
                     </div>
 
-                    <a href="https://github.com/FacBel/Django-proyect.git" class="github-btn">
-                        <i class="devicon-github-original"></i> GitHub
-                    </a>
+                    <div class="project-actions">
+                        <button class="view-btn" data-images='["img/django_rocket1.png", "img/django_rocket2.png", "img/django_rocket4.png", "img/django_rocket3.png", "img/Django administracion.png"]'>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="btn-view">Ver</span>
+                        </button>
+                        <a href="https://github.com/FacBel/Django-proyect.git" class="github-btn">
+                            <i class="devicon-github-original"></i> GitHub
+                        </a>
+                    </div>
 
                 </div>
 
@@ -300,21 +295,13 @@
 
             <div class="project-card">
 
-                <div class="project-slider">
-                    <div class="slider-wrapper">
-                        <img src="img/Rincon del vicio.png" alt="Rincon1" class="slide active">
-                        <img src="img/Rincon del vicio2.png" alt="Rincon2" class="slide">
-                        <img src="img/comprajuego.png" alt="Rincon3" class="slide">
-                        <img src="img/Carrito.png" alt="Rincon4" class="slide">
-                        <img src="img/compras.png" alt="Rincon5" class="slide">
-                    </div>
-                </div>
+                <div class="card-status finalizado" data-i18n="status-done">Finalizado</div>
 
                 <div class="project-content">
 
-                    <h3>Tienda de Videojuegos</h3>
+                    <h3 data-i18n="proj4-title">Tienda de Videojuegos</h3>
 
-                    <p>
+                    <p data-i18n="proj4-desc">
                        Aplicación web desarrollada con Django que simula una tienda de videojuegos. El sistema permite a los usuarios explorar un catálogo organizado por categorías, consultar información detallada de cada juego y administrar el contenido mediante un panel de administración. Cuenta con autenticación de usuarios, gestión de videojuegos y categorías mediante operaciones CRUD, carrito, historial de compras, etc.
                     </p>
 
@@ -324,9 +311,14 @@
                         <span><i class="devicon-mysql-plain"></i> MySQL</span>
                     </div>
 
-                    <a href="https://github.com/AleQuiroga26/Rincon_Del_Vicio.git" class="github-btn">
-                        <i class="devicon-github-original"></i> GitHub
-                    </a>
+                    <div class="project-actions">
+                        <button class="view-btn" data-images='["img/Rincon del vicio.png", "img/Rincon del vicio2.png", "img/comprajuego.png", "img/Carrito.png", "img/compras.png"]'>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="btn-view">Ver</span>
+                        </button>
+                        <a href="https://github.com/AleQuiroga26/Rincon_Del_Vicio.git" class="github-btn">
+                            <i class="devicon-github-original"></i> GitHub
+                        </a>
+                    </div>
 
                 </div>
 
@@ -337,19 +329,13 @@
 
             <div class="project-card">
 
-                <div class="project-slider">
-                    <div class="slider-wrapper">
-                        <img src="img/sql_1.png" alt="Sistema SQL" class="slide active">
-                        <img src="img/sql_2.png" alt="Sistema SQL vista 2" class="slide">
-                        <img src="img/sql panel.png" alt="Sistema SQL vista 2" class="slide">
-                    </div>
-                </div>
+                <div class="card-status finalizado" data-i18n="status-done">Finalizado</div>
 
                 <div class="project-content">
 
-                    <h3>Sistema SQL & Dashboard</h3>
+                    <h3 data-i18n="proj5-title">Sistema SQL & Dashboard</h3>
 
-                    <p>
+                    <p data-i18n="proj5-desc">
                         Diseño de modelo relacional robusto para gestión de ventas. Elaboración de consultas complejas (JOINs, subconsultas, agregaciones) para análisis de datos, visualizados en un dashboard de métricas clave.
                     </p>
 
@@ -359,9 +345,14 @@
                         <span><i class="devicon-html5-plain"></i> HTML/CSS</span>
                     </div>
 
-                    <a href="#" class="github-btn">
-                        <i class="devicon-github-original"></i> GitHub
-                    </a>
+                    <div class="project-actions">
+                        <button class="view-btn" data-images='["img/sql_1.png", "img/sql_2.png", "img/sql panel.png"]'>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="btn-view">Ver</span>
+                        </button>
+                        <a href="#" class="github-btn">
+                            <i class="devicon-github-original"></i> GitHub
+                        </a>
+                    </div>
 
                 </div>
 
@@ -371,18 +362,13 @@
 
             <div class="project-card">
 
-                <div class="project-slider">
-                    <div class="slider-wrapper">
-                        <img src="img/Mesa 1 .png" alt="Mesa Basket" class="slide active">
-                        <img src="img/mesa 2 .png" alt="Mesa Basket" class="slide">
-                    </div>
-                </div>
+                <div class="card-status finalizado" data-i18n="status-done">Finalizado</div>
 
                 <div class="project-content">
 
-                    <h3>Mesa de control de básquet</h3>
+                    <h3 data-i18n="proj6-title">Mesa de control de básquet</h3>
 
-                    <p>
+                    <p data-i18n="proj6-desc">
                         Plataforma integral para la gestión en tiempo real de partidos de básquet. Arquitectura unificada usando Reflex (Python) para frontend y backend, con control de reloj, faltas y estadísticas avanzadas almacenadas en base de datos.
                     </p>
 
@@ -393,9 +379,14 @@
                         <span><i class="devicon-css3-plain"></i> CSS</span>
                     </div>
                     
-                    <a href="#" class="github-btn">
-                        <i class="devicon-github-original"></i> GitHub
-                    </a>
+                    <div class="project-actions">
+                        <button class="view-btn" data-images='["img/Mesa 1 .png", "img/mesa 2 .png"]'>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="btn-view">Ver</span>
+                        </button>
+                        <a href="#" class="github-btn">
+                            <i class="devicon-github-original"></i> GitHub
+                        </a>
+                    </div>
 
                 </div>
 
@@ -405,18 +396,13 @@
 
             <div class="project-card">
 
-                <div class="project-slider">
-                    <div class="slider-wrapper">
-                        <img src="img/PokeAPI.png" alt="PokeAPI" class="slide active">
-
-                    </div>
-                </div>
+                <div class="card-status finalizado" data-i18n="status-done">Finalizado</div>
 
                 <div class="project-content">
 
-                    <h3>PokeAPI Frontend</h3>
+                    <h3 data-i18n="proj7-title">PokeAPI Frontend</h3>
 
-                    <p>
+                    <p data-i18n="proj7-desc">
                         Aplicación web interactiva que consume la API RESTful de PokeAPI. Implementación de estado global, paginación, llamadas asíncronas (fetch/axios) y diseño de componentes reutilizables con PrimeReact.
                     </p>
 
@@ -426,9 +412,14 @@
                         <span><i class="devicon-css3-plain"></i> PrimeReact</span>
                     </div>
 
-                    <a href="#" class="github-btn">
-                        <i class="devicon-github-original"></i> GitHub
-                    </a>
+                    <div class="project-actions">
+                        <button class="view-btn" data-images='["img/PokeAPI.png"]'>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="btn-view">Ver</span>
+                        </button>
+                        <a href="#" class="github-btn">
+                            <i class="devicon-github-original"></i> GitHub
+                        </a>
+                    </div>
 
                 </div>
 
@@ -441,7 +432,7 @@
 </section>
 
 <section id="tecnologias" class="tecnologias">
-    <h2>Tecnologías</h2>
+    <h2 data-i18n="tech-title">Tecnologías</h2>
 
     <div class="tech-grid">
 
@@ -514,6 +505,20 @@
         </div>
     </div>
 </section>
+    
+    <!-- MODAL GALERÍA -->
+    <div id="image-modal" class="image-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <button class="nav-btn prev-btn">&#10094;</button>
+            <div class="modal-image-container">
+                <img id="modal-image-display" src="" alt="Project view">
+            </div>
+            <button class="nav-btn next-btn">&#10095;</button>
+            <div class="modal-indicators" id="modal-indicators"></div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
