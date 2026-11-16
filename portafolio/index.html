@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facundo Bellandi | Desarrollador de Software</title>
+    <meta name="description" content="Facundo Bellandi, desarrollador de software. Sistemas web, APIs, integraciones con Odoo y automatizaciones con IA para negocios.">
+    <meta property="og:title" content="Facundo Bellandi | Desarrollador de Software">
+    <meta property="og:description" content="Sistemas web, APIs, integraciones y automatizaciones con IA para negocios.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#020c2b">
+    <link rel="icon" type="image/png" href="img/favicon.png.ico">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <title>Facundo Bellandi | Portfolio</title>
-    <link rel="icon" type="image/png" href="/portafolio/img/favicon.png.ico">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,24 +24,25 @@
 
     <!-- NAVBAR -->
 
-    <header class="header">
+    <header class="header" id="header">
 
-        <div class="logo">
-            Mi Portfolio<span>.</span>
-        </div>
+        <a href="#inicio" class="logo">Facundo<span>.dev</span></a>
 
         <nav class="navbar">
             <a href="#inicio" data-i18n="nav-home">Inicio</a>
-            <a href="#sobre-mi" data-i18n="nav-about">Sobre mí</a>
+            <a href="#servicios" data-i18n="nav-services">Servicios</a>
             <a href="#proyectos" data-i18n="nav-projects">Proyectos</a>
             <a href="#tecnologias" data-i18n="nav-tech">Tecnologías</a>
+            <a href="#contacto" data-i18n="nav-contact">Contacto</a>
             <div class="lang-switch">
-                <button id="lang-en" class="lang-text-btn">EN</button>
-                <button id="lang-es" class="lang-text-btn active">ES</button>
+                <button id="lang-en" class="lang-text-btn" aria-label="English">EN</button>
+                <button id="lang-es" class="lang-text-btn active" aria-label="Español">ES</button>
             </div>
         </nav>
 
     </header>
+
+    <main>
 
     <!-- HERO -->
 
@@ -43,27 +50,31 @@
 
         <div class="hero-text">
 
+            <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                <span data-i18n="hero-badge">Disponible para proyectos freelance</span>
+            </div>
+
             <h1>
-                <span data-i18n="hero-hi">Hola, soy</span> <span>Facundo Bellandi</span>
+                <span data-i18n="hero-hi">Hola, soy</span> <span class="accent">Facundo Bellandi</span>
             </h1>
 
-            <h2 data-i18n="hero-role">
-                Estudiante de Desarrollo de Software en el último año
-            </h2>
+            <h2 data-i18n="hero-role">Desarrollador de Software</h2>
 
             <p data-i18n="hero-desc">
-                Desarrollo aplicaciones web, sistemas de gestión y soluciones digitales combinando frontend, backend y bases de datos. Tengo experiencia en tecnologías como Python, Django, Flask, React y SQL. Disfruto trabajar en equipo, aprender nuevas tecnologías y utilizar herramientas de IA para acelerar el desarrollo, para crear interfaces modernas y mejorar los resultados.
+                Desarrollo sistemas web, APIs e integraciones para negocios: desde una página o un sistema de turnos hasta conectar tu sistema de gestión con otras herramientas. Trabajo con Python, Django, Next.js, React y SQL, y uso IA para entregar más rápido y con mejores resultados.
             </p>
 
             <div class="hero-links-container">
-                <a href="#proyectos" class="hero-btn" data-i18n="hero-btn">
-                    Ver proyectos
-                </a>
+                <div class="hero-buttons">
+                    <a href="#proyectos" class="hero-btn" data-i18n="hero-btn">Ver proyectos</a>
+                    <a href="#contacto" class="hero-btn hero-btn--ghost" data-i18n="hero-btn2">Contactame</a>
+                </div>
                 <div class="hero-social">
-                    <a href="https://github.com/FacBel" target="_blank" title="GitHub"><i class="devicon-github-original"></i></a>
-                    <a href="https://www.linkedin.com/in/facundodev00/" target="_blank" title="LinkedIn"><i class="devicon-linkedin-plain"></i></a>
-                    <a href="#" id="copy-email" title="Copiar Email">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <a href="https://github.com/FacBel" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><i class="devicon-github-original"></i></a>
+                    <a href="https://www.linkedin.com/in/facundodev00/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><i class="devicon-linkedin-plain"></i></a>
+                    <a href="#" class="copy-email" title="Copiar email" aria-label="Copiar email">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                     </a>
                 </div>
             </div>
@@ -71,7 +82,9 @@
         </div>
 
         <div class="hero-image">
-            <img src="img/Yo_1.JPG" alt="Facundo">
+            <div class="hero-image-ring">
+                <img src="img/yo.jpg" alt="Facundo Bellandi" width="360" height="360">
+            </div>
         </div>
 
     </section>
@@ -83,85 +96,81 @@
         <h2 class="section-title" data-i18n="about-title">Sobre mí</h2>
 
         <div class="sobre-mi-container">
-            <div class="sobre-mi-intro">
+            <div class="sobre-mi-intro reveal">
                 <p data-i18n="about-desc">
-                 Soy estudiante de Desarrollo de Software con interés en desarrollo web, bases de datos, automatización e inteligencia artificial.
-                <br>
-                He desarrollado proyectos utilizando Python (Django y Flask), JavaScript (React y Next.js) y bases de datos como MySQL, creando aplicaciones web, APIs REST y soluciones personalizadas.<br>
-
-                Me gusta aprender nuevas tecnologías, trabajar en equipo y participar en proyectos que me permitan seguir creciendo profesionalmente.
- 
+                    Terminé la carrera de Desarrollo de Software en el ITEC y hoy desarrollo soluciones para negocios: aplicaciones web, APIs REST, paneles de gestión e integraciones entre sistemas.<br><br>
+                    Trabajo de punta a punta: diseño de la base de datos, backend con Django y Django REST Framework, frontend con Next.js, React y TypeScript, pruebas y despliegue. También integro sistemas de gestión como Odoo y armo automatizaciones con IA.<br><br>
+                    Me gusta entender el problema del negocio antes de escribir código, trabajar en equipo y entregar cosas que se usen de verdad.
                 </p>
             </div>
 
-            <h3 class="sobre-mi-subtitle" data-i18n="about-subtitle">Áreas de formación</h3>
+            <h3 class="sobre-mi-subtitle" data-i18n="about-subtitle">Áreas de trabajo</h3>
 
             <div class="formacion-grid">
 
-                <div class="formacion-card">
+                <div class="formacion-card reveal">
                     <div class="formacion-icon">💻</div>
                     <h4 data-i18n="form-web">Desarrollo Web</h4>
-                    <ul>
-                        <li>HTML, CSS y JavaScript.</li>
-                        <li>Python, React y Next.js.</li>
-                        <li>Django y Flask.</li>
-                        <li>APIs REST.</li>
-                        <li>Git y GitHub.</li>
+                    <ul data-i18n="form-web-list">
+                        <li>Next.js, React y TypeScript.</li>
+                        <li>Tailwind CSS y diseño responsive.</li>
+                        <li>Formularios con React Hook Form y Zod.</li>
+                        <li>Git, GitHub y despliegue en Vercel.</li>
                     </ul>
                 </div>
 
-                <div class="formacion-card">
+                <div class="formacion-card reveal">
+                    <div class="formacion-icon">⚙️</div>
+                    <h4 data-i18n="form-back">Backend y APIs</h4>
+                    <ul data-i18n="form-back-list">
+                        <li>Python con Django, DRF y Flask.</li>
+                        <li>APIs REST con autenticación JWT.</li>
+                        <li>Documentación con Swagger / OpenAPI.</li>
+                        <li>Contenedores con Docker.</li>
+                    </ul>
+                </div>
+
+                <div class="formacion-card reveal">
                     <div class="formacion-icon">🗄️</div>
                     <h4 data-i18n="form-db">Bases de Datos</h4>
-                    <ul>
+                    <ul data-i18n="form-db-list">
                         <li>Modelado relacional.</li>
-                        <li>SQL.</li>
-                        <li>MySQL.</li>
-                        <li>Diseño de esquemas y consultas.</li>
+                        <li>SQL: MySQL, SQLite y Firebird.</li>
+                        <li>Consultas complejas y reportes.</li>
+                        <li>Migración y sincronización de datos.</li>
                     </ul>
                 </div>
 
-                <div class="formacion-card">
+                <div class="formacion-card reveal">
+                    <div class="formacion-icon">🔗</div>
+                    <h4 data-i18n="form-ia">Integraciones e IA</h4>
+                    <ul data-i18n="form-ia-list">
+                        <li>Integración con el ERP Odoo por API.</li>
+                        <li>Automatizaciones con n8n.</li>
+                        <li>IA aplicada con la API de Gemini.</li>
+                        <li>Scripts de automatización con Python y PowerShell.</li>
+                    </ul>
+                </div>
+
+                <div class="formacion-card reveal">
                     <div class="formacion-icon">🎨</div>
                     <h4 data-i18n="form-ui">UI / UX</h4>
-                    <ul>
-                        <li>Diseño de interfaces.</li>
-                        <li>Experiencia de usuario.</li>
-                        <li>Diseño responsive.</li>
+                    <ul data-i18n="form-ui-list">
+                        <li>Wireframes y prototipos.</li>
                         <li>Sistemas de diseño.</li>
+                        <li>Diseño mobile-first.</li>
+                        <li>Accesibilidad (WCAG).</li>
                     </ul>
                 </div>
 
-                <div class="formacion-card">
+                <div class="formacion-card reveal">
                     <div class="formacion-icon">✅</div>
                     <h4 data-i18n="form-qa">Calidad de Software</h4>
-                    <ul>
-                        <li>Casos de prueba.</li>
+                    <ul data-i18n="form-qa-list">
+                        <li>Casos de prueba y planes de testing.</li>
+                        <li>Gestión de pruebas con TestMonitor.</li>
+                        <li>Tests automatizados con Vitest.</li>
                         <li>Validación y verificación.</li>
-                        <li>Testing estático y dinámico.</li>
-                    </ul>
-                </div>
-
-                <div class="formacion-card">
-                    <div class="formacion-icon">🌐</div>
-                    <h4 data-i18n="form-net">Redes y Sistemas</h4>
-                    <ul>
-                        <li>Subnetting.</li>
-                        <li>Sistemas operativos personalizados.</li>
-                        <li>Cubic.</li>
-                        <li>Máquinas virtuales.</li>
-                        <li>Instalación de sistemas operativos.</li>
-                    </ul>
-                </div>
-
-                <div class="formacion-card">
-                    <div class="formacion-icon">🤖</div>
-                    <h4 data-i18n="form-ia">IA y Automatización</h4>
-                    <ul>
-                        <li>Uso de asistentes de código.</li>
-                        <li>Automatización de tareas.</li>
-                        <li>Integración de IA en flujos de trabajo.</li>
-                        <li>Generación rápida de prototipos.</li>
                     </ul>
                 </div>
 
@@ -170,351 +179,471 @@
 
     </section>
 
-    <!-- TECNOLOGIAS -->
+    <!-- SERVICIOS -->
+
+    <section class="servicios" id="servicios">
+
+        <h2 class="section-title" data-i18n="services-title">Servicios</h2>
+        <p class="section-subtitle" data-i18n="services-subtitle">Lo que puedo hacer por tu negocio.</p>
+
+        <div class="servicios-grid">
+
+            <div class="servicio-card reveal">
+                <div class="servicio-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 2v4M16 2v4M8 14h3M8 17h6"/></svg>
+                </div>
+                <h3 data-i18n="srv1-title">Sistemas web a medida</h3>
+                <p data-i18n="srv1-desc">Turnos online, paneles de gestión, catálogos con stock y lo que tu negocio necesite para dejar de trabajar con planillas.</p>
+            </div>
+
+            <div class="servicio-card reveal">
+                <div class="servicio-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4M2 8h20"/></svg>
+                </div>
+                <h3 data-i18n="srv2-title">Páginas web</h3>
+                <p data-i18n="srv2-desc">Sitios rápidos, responsive y fáciles de mantener para presentar tu negocio y que te encuentren.</p>
+            </div>
+
+            <div class="servicio-card reveal">
+                <div class="servicio-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                </div>
+                <h3 data-i18n="srv3-title">APIs e integraciones</h3>
+                <p data-i18n="srv3-desc">Conecto tus sistemas entre sí: ERP como Odoo, tienda online, bases de datos y planillas, para que la información esté siempre al día.</p>
+            </div>
+
+            <div class="servicio-card reveal">
+                <div class="servicio-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9z"/><path d="M19 15l.9 2.1 2.1.9-2.1.9L19 21l-.9-2.1-2.1-.9 2.1-.9z"/></svg>
+                </div>
+                <h3 data-i18n="srv4-title">Automatizaciones con IA</h3>
+                <p data-i18n="srv4-desc">Flujos con n8n e IA que resuelven solas las tareas repetitivas: procesar documentos, generar informes y enviar avisos.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROYECTOS -->
 
     <section class="projects-section" id="proyectos">
 
-    <h2 class="section-title" data-i18n="proj-title">
-        Proyectos
-    </h2>
-    <h3 class="projects-subtitle" data-i18n="proj-subtitle">Algunos siguen en desarrollo y otros están finalizados, pero sigo trabajando en ellos y en más proyectos.</h3>
-
-
-    <div class="slider-container">
+        <h2 class="section-title" data-i18n="proj-title">Proyectos</h2>
+        <p class="section-subtitle" data-i18n="proj-subtitle">Proyectos finales de la carrera, trabajos en equipo y desarrollos propios. Tocá la imagen para ver las capturas.</p>
 
         <div class="projects-grid">
 
-
-                        <!-- N8N -->
-
-            <div class="project-card">
-
-                <div class="card-status en-desarrollo" data-i18n="status-dev">En desarrollo</div>
-
+            <!-- INMOBILIARIA FRONT -->
+            <article class="project-card reveal">
+                <div class="project-cover project-cover--placeholder" style="--c1:#0ea5e9; --c2:#6366f1;">
+                    <span class="placeholder-icon">🏠</span>
+                    <span class="placeholder-name">Inmobiliaria Riri</span>
+                </div>
+                <div class="card-status finalizado" data-i18n="status-done">Finalizado</div>
                 <div class="project-content">
-
-                    <h3 data-i18n="proj1-title">Analizador de cv con IA</h3>
-
-                    <p data-i18n="proj1-desc">
-                       Sistema de análisis automático de currículums desarrollado con n8n y Google Gemini. Permite cargar un CV en PDF, extraer su contenido, generar una evaluación mediante IA y enviar un informe profesional en formato HTML por correo electrónico con fortalezas, oportunidades de mejora y recomendaciones personalizadas.
-                    </p>
-
+                    <span class="project-kind" data-i18n="kind-efi">Proyecto final (EFI) · Full Stack</span>
+                    <h3 data-i18n="pinf-title">Inmobiliaria Riri (Frontend)</h3>
+                    <p data-i18n="pinf-desc">Sitio web de una inmobiliaria con catálogo público, filtros por operación, tipo, barrio y precio, ficha de cada propiedad y modo claro/oscuro. Incluye un panel privado con login JWT para crear, editar y eliminar propiedades, formularios validados con React Hook Form y Zod, y tests con Vitest. Consume la API REST hecha en Django.</p>
                     <div class="project-tags">
-                        <span>
-                            <img src="https://cdn.simpleicons.org/n8n/EA4B71" width="18">
-                            n8n
-                        </span>
-                        <span>
-                            <img src="https://cdn.simpleicons.org/googlegemini/8AB4F8" width="18">
-                                Gemini API
-                        </span>
-                        <span><i class="devicon-html5-plain colored"></i> HTML5</span>
+                        <span><i class="devicon-nextjs-plain"></i> Next.js</span>
+                        <span><i class="devicon-react-original"></i> React</span>
+                        <span><i class="devicon-typescript-plain"></i> TypeScript</span>
+                        <span><i class="devicon-tailwindcss-original"></i> Tailwind</span>
+                        <span><img src="https://cdn.simpleicons.org/zod/7dd3fc" width="15" height="15" alt=""> Zod</span>
+                        <span><i class="devicon-vitest-plain"></i> Vitest</span>
                     </div>
+                    <div class="project-actions">
+                        <a href="https://inmobiliaria-phi-five.vercel.app" target="_blank" rel="noopener" class="view-btn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg> <span data-i18n="btn-demo">Ver demo</span>
+                        </a>
+                        <a href="https://github.com/AleQuiroga26/inmobiliaria" target="_blank" rel="noopener" class="github-btn">
+                            <i class="devicon-github-original"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </article>
 
+            <!-- INMOBILIARIA BACK -->
+            <article class="project-card reveal">
+                <button class="project-cover" data-images='["img/inmo_api_swagger.png", "img/inmo_api_propiedades.png", "img/inmo_api_detalle.png", "img/inmo_api_filtros.png", "img/inmo_api_admin.png"]' aria-label="Ver capturas">
+                    <img src="img/inmo_api_swagger.png" alt="Documentación Swagger de la API de Inmobiliaria Riri" loading="lazy">
+                    <span class="cover-hint" data-i18n="btn-view">Ver capturas</span>
+                </button>
+                <div class="card-status finalizado" data-i18n="status-done">Finalizado</div>
+                <div class="project-content">
+                    <span class="project-kind" data-i18n="kind-efi">Proyecto final (EFI) · Full Stack</span>
+                    <h3 data-i18n="pinb-title">Inmobiliaria Riri (API REST)</h3>
+                    <p data-i18n="pinb-desc">API REST con Django REST Framework para gestionar propiedades, clientes, visitas y contratos: 10 modelos en 4 apps, autenticación con JWT, filtros y búsqueda con django-filter, documentación automática con Swagger y Redoc, y panel de administración. Lista para levantar con Docker.</p>
+                    <div class="project-tags">
+                        <span><i class="devicon-djangorest-plain"></i> Django REST</span>
+                        <span><i class="devicon-python-plain"></i> Python</span>
+                        <span><img src="https://cdn.simpleicons.org/jsonwebtokens/7dd3fc" width="15" height="15" alt=""> JWT</span>
+                        <span><i class="devicon-swagger-plain"></i> Swagger</span>
+                        <span><i class="devicon-docker-plain"></i> Docker</span>
+                        <span><i class="devicon-sqlite-plain"></i> SQLite</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="view-btn" data-images='["img/inmo_api_swagger.png", "img/inmo_api_propiedades.png", "img/inmo_api_detalle.png", "img/inmo_api_filtros.png", "img/inmo_api_admin.png"]'>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="btn-view">Ver capturas</span>
+                        </button>
+                        <a href="https://github.com/FacBel/inmobiliaria-riri-back" target="_blank" rel="noopener" class="github-btn">
+                            <i class="devicon-github-original"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- BARBERIA -->
+            <article class="project-card reveal">
+                <div class="project-cover project-cover--placeholder" style="--c1:#e11d48; --c2:#1d4ed8;">
+                    <span class="placeholder-icon">💈</span>
+                    <span class="placeholder-name">BarberíaRiri</span>
+                </div>
+                <div class="card-status finalizado" data-i18n="status-done">Finalizado</div>
+                <div class="project-content">
+                    <span class="project-kind" data-i18n="kind-efi-ux">Proyecto final (EFI) · UI/UX</span>
+                    <h3 data-i18n="pbar-title">BarberíaRiri: turnos online</h3>
+                    <p data-i18n="pbar-desc">App web mobile-first para reservar turnos en una barbería en menos de un minuto: el cliente elige servicio, barbero y horario, y asegura su lugar con una seña. Tiene lista de espera, historial y tarjeta de sellos para el cliente, y una agenda para los barberos. Diseñada con un sistema de diseño propio, modo oscuro y criterios de accesibilidad WCAG.</p>
+                    <div class="project-tags">
+                        <span><i class="devicon-javascript-plain"></i> JavaScript</span>
+                        <span><i class="devicon-tailwindcss-original"></i> Tailwind</span>
+                        <span><i class="devicon-html5-plain"></i> HTML5</span>
+                        <span>🎨 UI/UX</span>
+                        <span>♿ WCAG</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ODOO -->
+            <article class="project-card reveal">
+                <div class="project-cover project-cover--placeholder" style="--c1:#714b67; --c2:#0ea5e9;">
+                    <span class="placeholder-icon">🔄</span>
+                    <span class="placeholder-name">Stock → Odoo</span>
+                </div>
+                <div class="card-status en-desarrollo" data-i18n="status-dev">En desarrollo</div>
+                <div class="project-content">
+                    <span class="project-kind" data-i18n="kind-real">Proyecto real · Integración</span>
+                    <h3 data-i18n="podoo-title">Sincronización de stock con Odoo</h3>
+                    <p data-i18n="podoo-desc">Integración para una empresa de distribución que sincroniza el stock de su sistema de gestión (base de datos Firebird) con el ERP Odoo. Detecta los movimientos de stock, compara ambos sistemas y actualiza o da de alta los productos en Odoo a través de su API, con un modo simulación para revisar los cambios antes de aplicarlos.</p>
+                    <div class="project-tags">
+                        <span><i class="devicon-python-plain"></i> Python</span>
+                        <span><img src="https://cdn.simpleicons.org/odoo/7dd3fc" width="15" height="15" alt=""> Odoo</span>
+                        <span>🔥 Firebird</span>
+                        <span><i class="devicon-powershell-plain"></i> PowerShell</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- N8N -->
+            <article class="project-card reveal">
+                <button class="project-cover" data-images='["img/Flujo1.png", "img/formulario1.png", "img/html3.png", "img/html4.png", "img/html2.png", "img/Prompt.png"]' aria-label="Ver capturas">
+                    <img src="img/Flujo1.png" alt="Flujo de n8n del analizador de CV" loading="lazy">
+                    <span class="cover-hint" data-i18n="btn-view">Ver capturas</span>
+                </button>
+                <div class="card-status finalizado" data-i18n="status-done">Finalizado</div>
+                <div class="project-content">
+                    <span class="project-kind" data-i18n="kind-personal">Proyecto propio · IA</span>
+                    <h3 data-i18n="proj1-title">Analizador de CV con IA</h3>
+                    <p data-i18n="proj1-desc">Sistema de análisis automático de currículums desarrollado con n8n y Google Gemini. Permite cargar un CV en PDF, extraer su contenido, generar una evaluación mediante IA y enviar un informe profesional en HTML por correo electrónico con fortalezas, oportunidades de mejora y recomendaciones personalizadas.</p>
+                    <div class="project-tags">
+                        <span><img src="https://cdn.simpleicons.org/n8n/7dd3fc" width="15" height="15" alt=""> n8n</span>
+                        <span><img src="https://cdn.simpleicons.org/googlegemini/7dd3fc" width="15" height="15" alt=""> Gemini API</span>
+                        <span><i class="devicon-html5-plain"></i> HTML5</span>
+                    </div>
                     <div class="project-actions">
                         <button class="view-btn" data-images='["img/Flujo1.png", "img/formulario1.png", "img/html3.png", "img/html4.png", "img/html2.png", "img/Prompt.png"]'>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="btn-view">Ver</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="btn-view">Ver capturas</span>
                         </button>
-                        <a href="#" class="github-btn">
-                            <i class="devicon-github-original"></i> GitHub
-                        </a>
                     </div>
-
                 </div>
+            </article>
 
-            </div>
-
-            <!-- ROCKET PIZZA -->
-
-            <div class="project-card">
-
+            <!-- TESTING -->
+            <article class="project-card reveal">
+                <button class="project-cover" data-images='["img/testing_orangehrm.png"]' aria-label="Ver capturas">
+                    <img src="img/testing_orangehrm.png" alt="Casos de prueba de OrangeHRM en TestMonitor" loading="lazy">
+                    <span class="cover-hint" data-i18n="btn-view">Ver capturas</span>
+                </button>
                 <div class="card-status finalizado" data-i18n="status-done">Finalizado</div>
-
                 <div class="project-content">
-
-                    <h3 data-i18n="proj2-title">Rocket Pizza (Frontend)</h3>
-
-                    <p data-i18n="proj2-desc">
-                        Aplicación web simulando una pizzería online, enfocada en UI/UX y rendimiento. Implementación de Server-Side Rendering (SSR) y ruteo dinámico con Next.js, junto a un diseño full responsive con Tailwind. contiene un carrito de compras, página de contacto y un blog con artículos sobre pizzas traidas desde una API externa.
-                    </p>
-
+                    <span class="project-kind" data-i18n="kind-qa">Proyecto académico · Testing</span>
+                    <h3 data-i18n="ptest-title">Plan de pruebas de OrangeHRM</h3>
+                    <p data-i18n="ptest-desc">Diseño de casos de prueba para OrangeHRM, un sistema de recursos humanos, gestionados en TestMonitor. Los casos están organizados por módulo (login, gestión de empleados, administración y dashboard) e incluyen pasos, datos de prueba y resultados esperados.</p>
                     <div class="project-tags">
-                        <span><i class="devicon-nextjs-line"></i> Next.js</span>
-                        <span><i class="devicon-react-original"></i> React</span>
-                        <span><i class="devicon-tailwindcss-plain"></i> Tailwind</span>
+                        <span>✅ TestMonitor</span>
+                        <span>🧪 QA</span>
+                        <span>📋 Casos de prueba</span>
                     </div>
+                    <div class="project-actions">
+                        <button class="view-btn" data-images='["img/testing_orangehrm.png"]'>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="btn-view">Ver capturas</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
 
+            <!-- ROCKET PIZZA FRONT -->
+            <article class="project-card reveal">
+                <button class="project-cover" data-images='["img/RPmejorado1.png", "img/RPmejorado2.png", "img/RPmejorado3.png"]' aria-label="Ver capturas">
+                    <img src="img/RPmejorado1.png" alt="Inicio de Rocket Pizza" loading="lazy">
+                    <span class="cover-hint" data-i18n="btn-view">Ver capturas</span>
+                </button>
+                <div class="card-status finalizado" data-i18n="status-done">Finalizado</div>
+                <div class="project-content">
+                    <span class="project-kind" data-i18n="kind-academic">Proyecto académico</span>
+                    <h3 data-i18n="proj2-title">Rocket Pizza (Frontend)</h3>
+                    <p data-i18n="proj2-desc">Aplicación web que simula una pizzería online, enfocada en UI/UX y rendimiento. Usa Server-Side Rendering (SSR) y ruteo dinámico con Next.js, con un diseño full responsive en Tailwind. Tiene carrito de compras, página de contacto y un blog con artículos sobre pizzas traídos desde una API externa.</p>
+                    <div class="project-tags">
+                        <span><i class="devicon-nextjs-plain"></i> Next.js</span>
+                        <span><i class="devicon-react-original"></i> React</span>
+                        <span><i class="devicon-tailwindcss-original"></i> Tailwind</span>
+                    </div>
                     <div class="project-actions">
                         <button class="view-btn" data-images='["img/RPmejorado1.png", "img/RPmejorado2.png", "img/RPmejorado3.png"]'>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="btn-view">Ver</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="btn-view">Ver capturas</span>
                         </button>
-                        <a href="https://github.com/AleQuiroga26/Rocket-Pizza.git" class="github-btn">
+                        <a href="https://github.com/AleQuiroga26/Rocket-Pizza" target="_blank" rel="noopener" class="github-btn">
                             <i class="devicon-github-original"></i> GitHub
                         </a>
                     </div>
-
                 </div>
+            </article>
 
-            </div>
-
-            <!-- DJANGO -->
-
-            <div class="project-card">
-
+            <!-- ROCKET PIZZA BACK -->
+            <article class="project-card reveal">
+                <button class="project-cover" data-images='["img/django_rocket1.png", "img/django_rocket2.png", "img/django_rocket4.png", "img/django_rocket3.png", "img/Django administracion.png"]' aria-label="Ver capturas">
+                    <img src="img/django_rocket1.png" alt="Sistema de gestión de Rocket Pizza en Django" loading="lazy">
+                    <span class="cover-hint" data-i18n="btn-view">Ver capturas</span>
+                </button>
                 <div class="card-status finalizado" data-i18n="status-done">Finalizado</div>
-
                 <div class="project-content">
-
+                    <span class="project-kind" data-i18n="kind-academic">Proyecto académico</span>
                     <h3 data-i18n="proj3-title">Rocket Pizza (Backend)</h3>
-
-                    <p data-i18n="proj3-desc">
-                        Sistema de gestión backend utilizando el patrón MVT (Model-View-Template). Incluye un panel administrativo completo, operaciones CRUD para productos y categorías, y autenticación de usuarios.
-                    </p>
-
+                    <p data-i18n="proj3-desc">Sistema de gestión backend con el patrón MVT (Model-View-Template). Incluye un panel administrativo completo, operaciones CRUD para productos y categorías, y autenticación de usuarios.</p>
                     <div class="project-tags">
                         <span><i class="devicon-django-plain"></i> Django</span>
                         <span><i class="devicon-python-plain"></i> Python</span>
                         <span><i class="devicon-sqlite-plain"></i> SQLite</span>
                         <span><i class="devicon-html5-plain"></i> HTML/CSS</span>
                     </div>
-
                     <div class="project-actions">
                         <button class="view-btn" data-images='["img/django_rocket1.png", "img/django_rocket2.png", "img/django_rocket4.png", "img/django_rocket3.png", "img/Django administracion.png"]'>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="btn-view">Ver</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="btn-view">Ver capturas</span>
                         </button>
-                        <a href="https://github.com/FacBel/Django-proyect.git" class="github-btn">
+                        <a href="https://github.com/FacBel/Django-proyect" target="_blank" rel="noopener" class="github-btn">
                             <i class="devicon-github-original"></i> GitHub
                         </a>
                     </div>
-
                 </div>
+            </article>
 
-            </div>
-
-            <!-- VICIO2 -->
-
-            <div class="project-card">
-
+            <!-- VIDEOJUEGOS -->
+            <article class="project-card reveal">
+                <button class="project-cover" data-images='["img/Rincon del vicio.png", "img/Rincon del vicio2.png", "img/comprajuego.png", "img/Carrito.png", "img/compras.png"]' aria-label="Ver capturas">
+                    <img src="img/Rincon del vicio.png" alt="Tienda de videojuegos" loading="lazy">
+                    <span class="cover-hint" data-i18n="btn-view">Ver capturas</span>
+                </button>
                 <div class="card-status finalizado" data-i18n="status-done">Finalizado</div>
-
                 <div class="project-content">
-
+                    <span class="project-kind" data-i18n="kind-academic">Proyecto académico</span>
                     <h3 data-i18n="proj4-title">Tienda de Videojuegos</h3>
-
-                    <p data-i18n="proj4-desc">
-                       Aplicación web desarrollada con Django que simula una tienda de videojuegos. El sistema permite a los usuarios explorar un catálogo organizado por categorías, consultar información detallada de cada juego y administrar el contenido mediante un panel de administración. Cuenta con autenticación de usuarios, gestión de videojuegos y categorías mediante operaciones CRUD, carrito, historial de compras, etc.
-                    </p>
-
+                    <p data-i18n="proj4-desc">Aplicación web con Django que simula una tienda de videojuegos. Los usuarios exploran un catálogo por categorías, ven el detalle de cada juego, usan el carrito y consultan su historial de compras. Tiene autenticación de usuarios y un panel de administración con CRUD de juegos y categorías.</p>
                     <div class="project-tags">
                         <span><i class="devicon-django-plain"></i> Django</span>
                         <span><i class="devicon-python-plain"></i> Python</span>
                         <span><i class="devicon-mysql-plain"></i> MySQL</span>
                     </div>
-
                     <div class="project-actions">
                         <button class="view-btn" data-images='["img/Rincon del vicio.png", "img/Rincon del vicio2.png", "img/comprajuego.png", "img/Carrito.png", "img/compras.png"]'>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="btn-view">Ver</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="btn-view">Ver capturas</span>
                         </button>
-                        <a href="https://github.com/AleQuiroga26/Rincon_Del_Vicio.git" class="github-btn">
+                        <a href="https://github.com/AleQuiroga26/Rincon_Del_Vicio" target="_blank" rel="noopener" class="github-btn">
                             <i class="devicon-github-original"></i> GitHub
                         </a>
                     </div>
-
                 </div>
-
-            </div>
-
+            </article>
 
             <!-- SQL -->
-
-            <div class="project-card">
-
+            <article class="project-card reveal">
+                <button class="project-cover" data-images='["img/sql_1.png", "img/sql_2.png", "img/sql panel.png"]' aria-label="Ver capturas">
+                    <img src="img/sql_1.png" alt="Consultas SQL del sistema de ventas" loading="lazy">
+                    <span class="cover-hint" data-i18n="btn-view">Ver capturas</span>
+                </button>
                 <div class="card-status finalizado" data-i18n="status-done">Finalizado</div>
-
                 <div class="project-content">
-
-                    <h3 data-i18n="proj5-title">Sistema SQL & Dashboard</h3>
-
-                    <p data-i18n="proj5-desc">
-                        Diseño de modelo relacional robusto para gestión de ventas. Elaboración de consultas complejas (JOINs, subconsultas, agregaciones) para análisis de datos, visualizados en un dashboard de métricas clave.
-                    </p>
-
+                    <span class="project-kind" data-i18n="kind-academic">Proyecto académico</span>
+                    <h3 data-i18n="proj5-title">Sistema SQL y Dashboard</h3>
+                    <p data-i18n="proj5-desc">Modelo relacional para la gestión de ventas de un negocio de ropa. Consultas complejas (JOINs, subconsultas y agregaciones) para analizar los datos, visualizados en un dashboard con las métricas clave.</p>
                     <div class="project-tags">
                         <span><i class="devicon-mysql-plain"></i> MySQL</span>
                         <span><i class="devicon-dbeaver-plain"></i> DBeaver</span>
                         <span><i class="devicon-html5-plain"></i> HTML/CSS</span>
                     </div>
-
                     <div class="project-actions">
                         <button class="view-btn" data-images='["img/sql_1.png", "img/sql_2.png", "img/sql panel.png"]'>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="btn-view">Ver</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="btn-view">Ver capturas</span>
                         </button>
-                        <a href="#" class="github-btn">
-                            <i class="devicon-github-original"></i> GitHub
-                        </a>
                     </div>
-
                 </div>
-
-            </div>
+            </article>
 
             <!-- BASKET -->
-
-            <div class="project-card">
-
+            <article class="project-card reveal">
+                <button class="project-cover" data-images='["img/Mesa 1 .png", "img/mesa 2 .png"]' aria-label="Ver capturas">
+                    <img src="img/Mesa 1 .png" alt="Mesa de control de básquet" loading="lazy">
+                    <span class="cover-hint" data-i18n="btn-view">Ver capturas</span>
+                </button>
                 <div class="card-status finalizado" data-i18n="status-done">Finalizado</div>
-
                 <div class="project-content">
-
+                    <span class="project-kind" data-i18n="kind-academic">Proyecto académico</span>
                     <h3 data-i18n="proj6-title">Mesa de control de básquet</h3>
-
-                    <p data-i18n="proj6-desc">
-                        Plataforma integral para la gestión en tiempo real de partidos de básquet. Arquitectura unificada usando Reflex (Python) para frontend y backend, con control de reloj, faltas y estadísticas avanzadas almacenadas en base de datos.
-                    </p>
-
+                    <p data-i18n="proj6-desc">Plataforma para gestionar partidos de básquet en tiempo real. Usa Reflex (Python) para frontend y backend en una sola arquitectura, con control de reloj, faltas y estadísticas guardadas en base de datos.</p>
                     <div class="project-tags">
                         <span><i class="devicon-python-plain"></i> Python</span>
-                        <span><i class="devicon-react-original"></i> Reflex</span>
+                        <span>⚡ Reflex</span>
                         <span><i class="devicon-mysql-plain"></i> MySQL</span>
                         <span><i class="devicon-css3-plain"></i> CSS</span>
                     </div>
-                    
                     <div class="project-actions">
                         <button class="view-btn" data-images='["img/Mesa 1 .png", "img/mesa 2 .png"]'>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="btn-view">Ver</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="btn-view">Ver capturas</span>
                         </button>
-                        <a href="#" class="github-btn">
-                            <i class="devicon-github-original"></i> GitHub
-                        </a>
                     </div>
-
                 </div>
-
-            </div>
+            </article>
 
             <!-- POKEAPI -->
-
-            <div class="project-card">
-
+            <article class="project-card reveal">
+                <button class="project-cover" data-images='["img/PokeAPI.png"]' aria-label="Ver capturas">
+                    <img src="img/PokeAPI.png" alt="Aplicación PokeAPI" loading="lazy">
+                    <span class="cover-hint" data-i18n="btn-view">Ver capturas</span>
+                </button>
                 <div class="card-status finalizado" data-i18n="status-done">Finalizado</div>
-
                 <div class="project-content">
-
+                    <span class="project-kind" data-i18n="kind-academic">Proyecto académico</span>
                     <h3 data-i18n="proj7-title">PokeAPI Frontend</h3>
-
-                    <p data-i18n="proj7-desc">
-                        Aplicación web interactiva que consume la API RESTful de PokeAPI. Implementación de estado global, paginación, llamadas asíncronas (fetch/axios) y diseño de componentes reutilizables con PrimeReact.
-                    </p>
-
+                    <p data-i18n="proj7-desc">Aplicación web interactiva que consume la API REST de PokeAPI. Estado global, paginación, llamadas asíncronas (fetch/axios) y componentes reutilizables con PrimeReact.</p>
                     <div class="project-tags">
                         <span><i class="devicon-react-original"></i> React</span>
-                        <span><i class="devicon-javascript-plain"></i> JS</span>
-                        <span><i class="devicon-css3-plain"></i> PrimeReact</span>
+                        <span><i class="devicon-javascript-plain"></i> JavaScript</span>
+                        <span>🧩 PrimeReact</span>
                     </div>
-
                     <div class="project-actions">
                         <button class="view-btn" data-images='["img/PokeAPI.png"]'>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="btn-view">Ver</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg> <span data-i18n="btn-view">Ver capturas</span>
                         </button>
-                        <a href="#" class="github-btn">
+                        <a href="https://github.com/MateoVrr/efiJavaScript" target="_blank" rel="noopener" class="github-btn">
                             <i class="devicon-github-original"></i> GitHub
                         </a>
                     </div>
-
                 </div>
+            </article>
 
+        </div>
+
+    </section>
+
+    <!-- TECNOLOGIAS -->
+
+    <section id="tecnologias" class="tecnologias">
+        <h2 class="section-title" data-i18n="tech-title">Tecnologías</h2>
+
+        <div class="tech-groups">
+
+            <div class="tech-group reveal">
+                <h3 class="tech-group-title" data-i18n="tech-front">Frontend</h3>
+                <div class="tech-grid">
+                    <div class="tech-card"><i class="devicon-html5-plain colored"></i><p>HTML5</p></div>
+                    <div class="tech-card"><i class="devicon-css3-plain colored"></i><p>CSS3</p></div>
+                    <div class="tech-card"><i class="devicon-javascript-plain colored"></i><p>JavaScript</p></div>
+                    <div class="tech-card"><i class="devicon-typescript-plain colored"></i><p>TypeScript</p></div>
+                    <div class="tech-card"><i class="devicon-react-original colored"></i><p>React</p></div>
+                    <div class="tech-card"><i class="devicon-nextjs-plain"></i><p>Next.js</p></div>
+                    <div class="tech-card"><i class="devicon-tailwindcss-original colored"></i><p>Tailwind</p></div>
+                </div>
+            </div>
+
+            <div class="tech-group reveal">
+                <h3 class="tech-group-title" data-i18n="tech-back">Backend y bases de datos</h3>
+                <div class="tech-grid">
+                    <div class="tech-card"><i class="devicon-python-plain colored"></i><p>Python</p></div>
+                    <div class="tech-card"><i class="devicon-django-plain"></i><p>Django</p></div>
+                    <div class="tech-card"><i class="devicon-djangorest-plain tech-light"></i><p>Django REST</p></div>
+                    <div class="tech-card"><i class="devicon-flask-original"></i><p>Flask</p></div>
+                    <div class="tech-card"><img src="https://cdn.simpleicons.org/jsonwebtokens/ffffff" alt="" class="tech-icon"><p>JWT</p></div>
+                    <div class="tech-card"><i class="devicon-mysql-original tech-light"></i><p>MySQL</p></div>
+                    <div class="tech-card"><i class="devicon-sqlite-plain colored"></i><p>SQLite</p></div>
+                </div>
+            </div>
+
+            <div class="tech-group reveal">
+                <h3 class="tech-group-title" data-i18n="tech-int">Integraciones e IA</h3>
+                <div class="tech-grid">
+                    <div class="tech-card"><img src="https://cdn.simpleicons.org/odoo/A47FA3" alt="" class="tech-icon"><p>Odoo</p></div>
+                    <div class="tech-card"><img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="" class="tech-icon"><p>n8n</p></div>
+                    <div class="tech-card"><img src="https://cdn.simpleicons.org/googlegemini/8AB4F8" alt="" class="tech-icon"><p>Gemini API</p></div>
+                    <div class="tech-card"><i class="devicon-swagger-plain colored"></i><p>Swagger</p></div>
+                    <div class="tech-card"><i class="devicon-powershell-plain tech-light"></i><p>PowerShell</p></div>
+                </div>
+            </div>
+
+            <div class="tech-group reveal">
+                <h3 class="tech-group-title" data-i18n="tech-tools">Herramientas y testing</h3>
+                <div class="tech-grid">
+                    <div class="tech-card"><i class="devicon-git-plain colored"></i><p>Git</p></div>
+                    <div class="tech-card"><i class="devicon-github-original"></i><p>GitHub</p></div>
+                    <div class="tech-card"><i class="devicon-docker-plain colored"></i><p>Docker</p></div>
+                    <div class="tech-card"><i class="devicon-vercel-original"></i><p>Vercel</p></div>
+                    <div class="tech-card"><i class="devicon-vitest-plain colored"></i><p>Vitest</p></div>
+                </div>
             </div>
 
         </div>
+    </section>
 
-    </div>
+    <!-- CONTACTO -->
 
-</section>
+    <section id="contacto" class="contacto">
+        <div class="contacto-card reveal">
+            <h2 data-i18n="contact-title">¿Tenés un proyecto en mente?</h2>
+            <p data-i18n="contact-desc">Contame qué necesitás y te respondo con una propuesta y un presupuesto.</p>
+            <div class="contacto-actions">
+                <a href="mailto:martinbellandi2000@gmail.com" class="hero-btn">
+                    <span data-i18n="contact-email">Escribime un email</span>
+                </a>
+                <a href="https://www.linkedin.com/in/facundodev00/" target="_blank" rel="noopener" class="hero-btn hero-btn--ghost">
+                    <i class="devicon-linkedin-plain"></i> LinkedIn
+                </a>
+                <a href="https://github.com/FacBel" target="_blank" rel="noopener" class="hero-btn hero-btn--ghost">
+                    <i class="devicon-github-original"></i> GitHub
+                </a>
+            </div>
+            <button class="copy-email contacto-copy" type="button">
+                martinbellandi2000@gmail.com
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            </button>
+        </div>
+    </section>
 
-<section id="tecnologias" class="tecnologias">
-    <h2 data-i18n="tech-title">Tecnologías</h2>
+    </main>
 
-    <div class="tech-grid">
+    <footer class="footer">
+        <p>© 2026 Facundo Bellandi · <span data-i18n="footer">Desarrollador de Software</span></p>
+    </footer>
 
-        <div class="tech-card">
-            <i class="devicon-python-plain colored"></i>
-            <p>Python</p>
-        </div>
+    <!-- AVISO -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
-        <div class="tech-card">
-            <i class="devicon-javascript-plain colored"></i>
-            <p>JavaScript</p>
-        </div>
-        <div class="tech-card">
-            <i class="devicon-html5-plain colored"></i>
-            <p>HTML5</p>
-        </div>
-
-        <div class="tech-card">
-            <i class="devicon-css3-plain colored"></i>
-            <p>CSS3</p>
-        </div>
-        <div class="tech-card">
-            <i class="devicon-django-plain"></i>
-            <p>Django</p>
-        </div>        
-        <div class="tech-card">
-            <i class="devicon-flask-original"></i>
-            <p>Flask</p>
-        </div>
-        <div class="tech-card">
-            <i class="devicon-react-original colored"></i>
-            <p>React</p>
-        </div>
-
-        <div class="tech-card">
-            <i class="devicon-nextjs-line"></i>
-            <p>Next.js</p>
-        </div>
-        <div class="tech-card">
-            <i class="devicon-mysql-original colored"></i>
-            <p>MySQL</p>
-        </div>
-
-        <div class="tech-card">
-            <i class="devicon-sqlite-plain colored"></i>
-            <p>SQLite</p>
-        </div>
-
-        <div class="tech-card">
-            <i class="devicon-tailwindcss-original colored"></i>
-            <p>Tailwind</p>
-        </div>
-
-        <div class="tech-card">
-            <i class="devicon-git-plain colored"></i>
-            <p>Git</p>
-        </div>
-
-        <div class="tech-card">
-            <i class="devicon-github-original"></i>
-            <p>GitHub</p>
-        </div>
-        <div class="tech-card">
-            <img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" class="tech-icon">
-            <p>n8n</p>
-        </div>
-        <div class="tech-card">
-            <img src="https://cdn.simpleicons.org/googlegemini/4285F4" alt="Gemini" class="tech-icon">
-            <p>Gemini API</p>
-        </div>
-    </div>
-</section>
-    
     <!-- MODAL GALERÍA -->
-    <div id="image-modal" class="image-modal">
+    <div id="image-modal" class="image-modal" role="dialog" aria-modal="true" aria-label="Galería de capturas">
         <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <button class="nav-btn prev-btn">&#10094;</button>
+            <button class="close-modal" aria-label="Cerrar">&times;</button>
+            <button class="nav-btn prev-btn" aria-label="Anterior">&#10094;</button>
             <div class="modal-image-container">
-                <img id="modal-image-display" src="" alt="Project view">
+                <img id="modal-image-display" src="" alt="Captura del proyecto">
             </div>
-            <button class="nav-btn next-btn">&#10095;</button>
+            <button class="nav-btn next-btn" aria-label="Siguiente">&#10095;</button>
             <div class="modal-indicators" id="modal-indicators"></div>
         </div>
     </div>
